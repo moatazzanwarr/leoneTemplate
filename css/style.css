@@ -41,6 +41,37 @@ body {
 }
 /* End Global Rules */
 
+/* Start Components */
+
+.special-heading{
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.special-heading + p{
+    margin: -30px 0 0 0 ;
+    font-size: 20px;
+    text-align: center;
+    color: #777;
+}
+
+@media (max-width: 767px){
+    .special-heading{
+        font-size: 60px;
+    }
+
+    .special-heading + p{
+        margin-top: -20px;
+    }
+}
+
+/* End Components */
+
+
 /* Start Header */
 
 header{
@@ -198,7 +229,6 @@ header .links ul li:not(:last-child) a{
 }
 
 .features .feat h3{
-    font-size: ;
     font-weight: 800;
     margin-bottom: 30px;
 
@@ -211,3 +241,35 @@ header .links ul li:not(:last-child) a{
 }
 
 /* End Features */
+
+
+
+/* Strat Services */
+
+.services{
+    padding: 60px 0;
+}
+
+.services-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-gap: 20px;
+}
+
+.col .srv{
+    text-align: center;
+}
+
+.col .srv i{
+    color: var(--main-color);
+    font-size: 30px;
+}
+
+.col .srv .text h3{
+
+}
+
+.col .srv .text p{
+
+}
+/* End Services */
