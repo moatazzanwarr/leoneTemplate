@@ -3,6 +3,9 @@
 :root{
     --main-color: #27CFBE;
     --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section-background: #f6f6f6;
+    --p-color: #777;
 }
 
 /* End Variables */
@@ -57,7 +60,7 @@ body {
     margin: -30px 0 0 0 ;
     font-size: 20px;
     text-align: center;
-    color: #777;
+    color: var(--p-color);
 }
 
 @media (max-width: 767px){
@@ -129,7 +132,7 @@ header .links .icon span:nth-child(3){
 }
 
 header .links ul{
-    background: #f6f6f6;
+    background: var(--section-background);
     list-style: none;
     position: absolute;
     right: 0px;
@@ -158,7 +161,7 @@ header .links ul a{
 }
 
 header .links ul a:hover{
-    transform: translate(5px, 0);
+    margin-left: 10px;
 }
 
 header .links ul li:not(:last-child) a{
@@ -208,8 +211,8 @@ header .links ul li:not(:last-child) a{
 /* Start Features */
 
 .features{
-    padding: 60px 0;
-    background: #f6f6f6;
+    padding: var(--section-padding) 0;
+    background: var(--section-background);
 }
 
 .features .container{
@@ -237,7 +240,7 @@ header .links ul li:not(:last-child) a{
 
 .features .feat p{
     line-height: 1.8;
-    color: #777;
+    color: var(--p-color);
     font-size: 17px;
 }
 
@@ -286,7 +289,7 @@ header .links ul li:not(:last-child) a{
 }
 
 .services-content .col .srv .text p{
-    color: #777;
+    color: var(--p-color);
     font-weight: 300;
     line-height: 1.4;
 }
@@ -318,3 +321,46 @@ header .links ul li:not(:last-child) a{
 }
 
 /* End Services */
+
+/* Stert portfolio */
+
+.portfolio{
+    padding: 60px 0;
+    background: var(--section-background);
+}
+
+.portfolio .portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 30px;
+    margin-top: 80px;
+}
+
+.portfolio .portfolio-content .card{
+    background: #fff;
+}
+
+.portfolio-content .card img{
+    max-width: 100%;
+}
+
+.portfolio-content .card .info{
+    padding: 20px;
+}
+
+@media (max-width: 767px){
+    .portfolio-content .card .info{
+        text-align: center;
+    }
+}
+
+.portfolio-content .card .info h3{
+    margin: 0;
+}
+
+.portfolio-content .card .info p{
+    line-height: 1.4;
+    color: var(--p-color);
+    margin: 10px 0 0 0;
+}
+/* End portfolio */
