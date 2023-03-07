@@ -364,3 +364,97 @@ header .links ul li:not(:last-child) a{
     margin: 10px 0 0 0;
 }
 /* End portfolio */
+
+/* Start About */
+
+.about{
+    padding: var(--section-padding) 0 calc(var(--section-padding) + 60px);
+}
+
+.about-content{
+    margin: 100px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (max-width: 991px){
+    .about-content{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+
+
+.about-content .image{
+    position: relative;
+    width: 250px;
+    height: 375px;
+}
+
+@media (max-width:991px){
+    .about-content .image{
+        margin: 0 auto 80px;
+    }
+}
+
+.about-content .image::before{
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -60px;
+    width: 120px;
+    height: calc(100% + 100px);
+    background: #ebeced;
+    z-index: -1;
+}
+
+.about-content .image::after{
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: -150px;
+    height: 300px;
+    width: 120px;
+    border-left: 80px solid var(--main-color);
+    border-bottom: 80px solid var(--main-color);
+    z-index: -1;
+}
+
+@media (max-width: 620px){
+    .about-content .image::before,
+    .about-content .image::after{
+        display: none;
+    }
+}
+
+.about-content .image img{
+    max-width: 100%;
+}
+
+.about-content .text{
+    flex-basis: calc(100% - 500px);
+
+}
+
+.about-content .text p:first-of-type{
+    font-weight: 700;
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+.about-content .text hr{
+    width: 50%;
+    display: inline-block;
+    border-color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.about-content .text p:last-of-type{
+    line-height: 1.4;
+    color: var(--p-color);
+}
+
+/* End About */
