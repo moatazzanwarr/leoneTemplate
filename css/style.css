@@ -2,6 +2,7 @@
 
 :root{
     --main-color: #27CFBE;
+    --secondary-color: #2c4755;
 }
 
 /* End Variables */
@@ -250,26 +251,70 @@ header .links ul li:not(:last-child) a{
     padding: 60px 0;
 }
 
-.services-content{
+.services .services-content{
+    margin: 100px 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
-    grid-gap: 20px;
+    grid-gap: 30px;
 }
 
-.col .srv{
-    text-align: center;
+.services .services-content .col .srv{
+    display: flex;
+    gap: 10px;
+    margin: 0 0 40px 0;
 }
 
-.col .srv i{
+@media (max-width: 767px){
+    .services .services-content .col .srv{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.services .services-content .col .srv i{
     color: var(--main-color);
     font-size: 30px;
+    flex-basis: 60px;
 }
 
-.col .srv .text h3{
-
+.services-content .col .srv .text{
+    flex: 1;
 }
 
-.col .srv .text p{
-
+.services-content .col .srv .text h3{
+    margin: 0 0 20px 0;
 }
+
+.services-content .col .srv .text p{
+    color: #777;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.services-content .col .image{
+    text-align: center;
+    position: relative;
+}
+
+@media (max-width: 1200px){
+    .services-content .col .image{
+        display: none;
+    }
+}
+
+.services-content .col .image::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    background: var(--secondary-color);
+    height: calc(100% + 100px);
+    width: 120px;
+    z-index: -1;
+}
+
+.services-content .col .image img{
+    width: 250px;
+}
+
 /* End Services */
